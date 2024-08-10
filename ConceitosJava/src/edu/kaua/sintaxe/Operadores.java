@@ -1,3 +1,5 @@
+package edu.kaua.sintaxe;
+
 public class Operadores {
     public static void main(String[] args) {
         double soma = 14.3 + 12.2;
@@ -12,7 +14,7 @@ public class Operadores {
         String nomeLinguagem = "linguagem" + "Java";
         //System.out.print(nomeLinguagem);
 
-        //Operadores unários:
+        //edu.kaua.sintaxe.Operadores unários:
         int numero = 4;
         numero = - numero;//Torna o número negativo.
         numero = numero * -1;//Torna o número positivo novamente.
@@ -32,14 +34,14 @@ public class Operadores {
         boolean saida = a==b ? true : false;
         //System.out.print(saida);
 
-        //Operadores relacionais:
+        //edu.kaua.sintaxe.Operadores relacionais:
         boolean simNao = a<=b;
         //System.out.print("'a' é igual a 'b'? " + simNao);
         String nome1 = "Kaua";
         String nome2 = "Lima";
         //System.out.print(nome1.equals(nome2));
 
-        //Operadores lógicos:
+        //edu.kaua.sintaxe.Operadores lógicos:
         if (simNao && entrada){
             System.out.print("as duas são verdadeiras");
         } else if (simNao || entrada) {
