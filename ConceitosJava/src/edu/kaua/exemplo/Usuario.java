@@ -1,22 +1,62 @@
 package edu.kaua.exemplo;
-
-import javax.swing.*;
+import javax.swing.JOptionPane;
 
 public class Usuario {
     public static void main(String[] args) {
         SmartTv smartTv = new SmartTv();
+        Object[] options = {"Volume +", "Volume -", "On/Off", "Canal +", "Canal -"};
 
-        System.out.print("Estado da TV: " + smartTv.estadoDaTv + " | ");
+        int primeiroValor = JOptionPane.showOptionDialog(
+                null,
+                "Estado da TV: " + smartTv.estadoDaTv,
+                "Smart_TV",
+                JOptionPane.DEFAULT_OPTION,
+                JOptionPane.QUESTION_MESSAGE,
+                null,
+                options,
+                options[0]);
 
-        String primeiroValor = JOptionPane.showInputDialog("Digite algo...");
-        if (primeiroValor.equals("Ligar")){
+        if (primeiroValor == 2) {
             smartTv.ligarTv();
-            System.out.print("Estado da TV: " + smartTv.estadoDaTv + " | ");
-            System.out.print("Canal da Tv: " + smartTv.canal + " | ");
-            System.out.print("Volume da TV: " + smartTv.volume + " | ");
+            while (true) {
+                int escolha = JOptionPane.showOptionDialog(
+                        null,
+                        "Estado da TV: " + smartTv.estadoDaTv + "\n" + "Canal: " + smartTv.canal + "\n" + "Volume: " + smartTv.volume,
+                        "Smart_TV",
+                        JOptionPane.DEFAULT_OPTION,
+                        JOptionPane.INFORMATION_MESSAGE,
+                        null,
+                        options,
+                        options[0]);
+                if (escolha == 0) {
+                    smartTv.aumentarVolume();
+                }
+                if (escolha == 1) {
+                    smartTv.diminuirVolume();
+                }
+                if (escolha == 2) {
+                    smartTv.desligarTv();
+                    JOptionPane.showMessageDialog(
+                            null,
+                            "Smart TV desligada.",
+                            "Smart_TV!",
+                            JOptionPane.INFORMATION_MESSAGE);
+                    break;
+                }
+                if (escolha == 3) {
+                    smartTv.aumentarCanal();
+                }
+                if (escolha == 4) {
+                    smartTv.diminuirCanal();
+                }
+            }
         }
         else {
-            System.out.print("Comando inválido");
+            JOptionPane.showMessageDialog(
+                    null,
+                    "Comando inválido, tente novamente.",
+                    "Erro!",
+                    JOptionPane.ERROR_MESSAGE);
         }
     }
 }
