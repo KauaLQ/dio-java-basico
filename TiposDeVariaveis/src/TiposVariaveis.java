@@ -8,7 +8,7 @@ public class TiposVariaveis {
         float pi = 3.14F;
         double salario = 1423.17;
         boolean entrada = true;
-        char bits = 127;
+        char sexo = 'M';
 
         //Representação de texto
         String nome = "Kauã";
