@@ -1,4 +1,4 @@
-<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=9966FF&height=120&section=header"/>
+<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=FF3344&height=120&section=header"/>
 
 # dio-java-basico <img width='50' heigth='50' src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" />
 #### Olá, _Javeiros_. Este é um repositório reservado para armazar alguns conceitos básicos da liguagem Java através de trechos de código para que eu possa revisitá-los no futuro, caso seja necessário, além de registrar o início da minha jornada com essa linguagem de programação tão instigante. Também adicionei um exemplo onde simulo um controle de TV com algumas funcionalidades simples para fixar os conceitos aprendidos. Você pode acessar o código dele na pasta [exemplo](KauaLQ/dio-java-basico/ConceitosJava/src/edu/kaua/exemplo).
